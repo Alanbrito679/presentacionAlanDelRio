@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mi Presentación</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+text-align:center;
+color:white;
+background:linear-gradient(135deg,#1e1e8f,#6a00ff,#ff2e63);
+padding-top:80px;
+}
+
+/* MENU */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:#12084d;
+padding:15px;
+z-index:999;
+box-shadow:0 2px 10px rgba(0,0,0,.5);
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:12px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#00ffff;
+}
+
+h1{
+margin-top:20px;
+}
+
+.contenedor{
+width:80%;
+margin:auto;
+}
+
+.caja{
+background:rgba(0,0,0,.45);
+margin:30px auto;
+padding:25px;
+border-radius:18px;
+width:70%;
+}
+
+img{
+width:200px;
+border-radius:12px;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+width:80%;
+background:rgba(255,255,255,.1);
+color:white;
+}
+
+th,td{
+border:1px solid rgba(255,255,255,.3);
+padding:12px;
+}
+
+th{
+background:linear-gradient(135deg,#6a00ff,#ff2e63);
+}
+
+a{
+color:yellow;
+}
+
+/* secciones */
+.seccion{
+display:block;
+}
+
+/* boton */
+.volver{
+margin-top:25px;
+padding:12px 28px;
+border:none;
+background:#ff2e63;
+color:white;
+border-radius:12px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* opinion cancion */
+
+.opinion{
+background:rgba(255,255,255,.15);
+padding:20px;
+border-radius:15px;
+margin-top:25px;
+}
+
+
+/* ===== CARRUSEL NUEVO ===== */
+
+.slider{
+width:550px;
+height:380px;
+overflow:hidden;
+margin:auto;
+position:relative;
+border-radius:18px;
+}
+
+/* no recortar imágenes */
+.slider img{
+
+position:absolute;
+
+max-width:100%;
+max-height:100%;
+
+width:auto;
+height:auto;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+object-fit:contain;
+
+opacity:0;
+
+animation:cascada 12s infinite;
+
+}
+
+.slider img:nth-child(1){
+animation-delay:0s;
+}
+
+.slider img:nth-child(2){
+animation-delay:4s;
+}
+
+.slider img:nth-child(3){
+animation-delay:8s;
+}
+
+/* efecto cascada */
+@keyframes cascada{
+
+0%{
+opacity:0;
+transform:
+translate(80%,-50%);
+}
+
+10%,30%{
+opacity:1;
+transform:
+translate(-50%,-50%);
+}
+
+40%{
+opacity:0;
+transform:
+translate(-180%,-50%);
+}
+
+100%{
+opacity:0;
+transform:
+translate(-180%,-50%);
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<nav>
+
+<a href="#" onclick="mostrar('datos')">Datos</a>
+
+<a href="#" onclick="mostrar('generales')">
+Generales
+</a>
+
+<a href="#" onclick="mostrar('cancion')">
+Canción
+</a>
+
+<a href="#" onclick="mostrar('juegos')">
+Juegos
+</a>
+
+<a href="#" onclick="mostrar('sobre')">
+Sobre mí
+</a>
+
+<a href="#" onclick="mostrar('tareas')">
+Tareas
+</a>
+
+<a href="#" onclick="mostrar('redes')">
+Redes
+</a>
+
+<a href="#" onclick="volverInicio()">
+Inicio
+</a>
+
+</nav>
+
+
+
+<div class="contenedor">
+
+<h1>PRESENTACION PERSONAL AJDL</h1>
+
+
+
+<!-- DATOS -->
+<div class="caja seccion" id="datos">
+
+<h2>Datos Personales</h2>
+
+<p><b>Nombre:</b> ALAN JHOHAN DEL RIO LOPEZ</p>
+<p><b>Edad:</b> 21 AÑOS</p>
+<p><b>Carrera:</b> Ingenieria de Sistemas</p>
+<p><b>Semestre:</b> 7mo Semestre</p>
+
+<img src="imagenes/Mi foto.jpeg">
+
+<br>
+
+<button class="volver"
+onclick="volverInicio()">
+Volver al inicio
+</button>
+
+</div>
+
+
+
+<!-- DATOS GENERALES -->
+<div class="caja seccion" id="generales">
+
+<h2>Datos Generales</h2>
+
+<p>
+Mis pasatiempos en general es que a mi me gusta dibujar, tengo un cuaderno donde dibujo:<br>
+- Personajes de peliculas animadas<br>
+- Mis propios personajes creados obviamente por mi<br>
+entre muchas otras cosas mas...<br>
+</p>
+<p>
+Me Gusta escribir historia o cuentos de fantasia, tambien tengo otro cuaderno aparte donde escribo: <br>
+- Historias de fantasia con mis personajes que yo he creado<br>
+- Ideas para otros proyectos (osea otras historias)<br>
+</p>
+<p>
+Me gusta Jugar algunos deportes, como por ejemplo, Futbol <br>
+aunque soy arquero me divierto jugando <br>
+hay veces en las que no es mi dia y mi equipo siempre pierde<br>
+Nos reimos cada vez que sucede algo gracioso a alguno de mis amigos<br>
+Lo malo es que termino todo adolorido al dia siguiente jejeje<br>
+</p>
+<p>
+Me gusta mirar la TV por mis series y animes favoritos, como por ejemplo: <br>
+- Animes fantasiosos de aventuras como Dragon Ball o Naruto<br>
+- Animes de Comedia Romantica como The Angel Next Door Spoils Me Rotten o Roshidere <br>
+- Series de Animacion como Un Show Mas, Hora de Aventura y otros...<br>
+</p>
+
+<h3>Pasatiempos</h3>
+
+<div class="slider">
+<img src="imagenes/Dibujo2.jpg">
+<img src="imagenes/Escribir.jpg">
+<img src="imagenes/JuegoFut.jpg">
+</div>
+
+<br>
+
+<div class="slider">
+<img src="imagenes/AnimeTV.jpeg">
+<img src="imagenes/Dibujo2.jpg">
+<img src="imagenes/Escribir.jpg">
+</div>
+
+<button class="volver"
+onclick="volverInicio()">
+Volver al inicio
+</button>
+
+</div>
+
+
+
+
+<!-- CANCION -->
+<div class="caja seccion" id="cancion">
+
+<h2>Canción Favorita</h2>
+
+<table>
+<tr>
+
+<td>
+
+<iframe width="300"
+height="200"
+src="https://www.youtube.com/embed/sENM2wA_FTg"
+allowfullscreen>
+</iframe>
+
+</td>
+
+<td align="left">
+
+<img src="imagenes/Cancion.jpg" width="260">
+<img src="imagenes/Cancion1.jpg" width="260">
+
+</td>
+
+</tr>
+</table>
+
+
+<div class="opinion">
+
+<h3>¿Por qué me gusta esta canción?</h3>
+
+<p>
+Elijo esta cancion, principalmente porque en un pasado no muy lejano
+        fui una persona muy reservada, no me sentia comodo con nadie, porque 
+        pensaba que me harian mucho daño, tanto fisica como mentalmente, 
+        tenia miedo de hacer lo que mas queria por miedo al rechazo, asi que 
+        en ese entonces decidi ser alguien que no era para poder encajar con 
+        el resto de las personas y asi evitar los daños, pero fue un error, con 
+        esta cancion aprendi que uno debe ser uno mismo, ya que son esas diferencias 
+        lo que como personas a nosotros nos hace unicos, y automaticamente uno puede 
+        encajar en una sociedad con las personas correctas, con las personas que mas 
+        quieres, dicha cancion me enseño a valorarme a mi mismo y poder avanzar, asi 
+        logre abrirme mas hacia el entorno que me rodea, lo que en un princio me daba 
+        miedo hacer ahora lo hago con mas frecuencia, simplemente es una muy buena cancion.
+</p>
+
+</div>
+
+<button class="volver"
+onclick="volverInicio()">
+Volver al inicio
+</button>
+
+</div>
+
+
+
+
+<!-- VIDEOJUEGOS -->
+<div class="caja seccion" id="juegos">
+
+<h2>Mi Videojuego Favorito</h2>
+
+<table>
+
+<tr>
+
+<td>
+<img src="imagenes/MINECRAFT.jpg">
+</td>
+
+<td align="left">
+<h3>Minecraft</h3>
+
+<p><b>¿Por qué me gusta?</b> Principalmente me gusta por su diverso o
+                    amplio mundo abierto donde podemos explotar nuestra creatividad, asi tambien 
+                    poder demostra nuestras habilidades de supervivencia convatiendo monstruos y 
+                    demas...</p>
+                    <p><b>Logros:</b> Los logros que pude conseguir dentro del juego, a parte de 
+                    los mas basicos, fue hacer una buena construccion con suficientes items para 
+                    poder sobrevivir todas las noches e ir mejorando mis habilidades y defensas, 
+                    eso en el modo supervivencia, mientra en el modo creativo, me dedicaba a hacer
+                    o construir estructuras grandes, recuerdo poder haber construido una gran 
+                    mansion y un castillo.</p>
+
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td align="left">
+
+<h3>Left 4 Dead</h3>
+
+<p><b>¿Por qué me gusta?</b> El juego me gusta por su variedad de armas y 
+                          infectados a los cuales aniquilar con las armas que encontremos en 
+                        el camino, a su vez es entretenido jugar con amigos con los cuales 
+                    pasar un buen rato, ya sea riendonos por la desgracia de uno por haber 
+                muerto o cosas mucho mas graciosas.</p>
+                    <p><b>Logros:</b> Los logros que hasta ahora llevo del juego son 82 de 101
+                        que el juego tiene, entre los mas destacados es pasarme las campañas en 
+                    modo experto, asi tambien sobrevivir a una campaña solo con armas cuerpo a 
+                cuerpo, entre muchos otros mas.</p>
+
+</td>
+
+<td>
+<img src="imagenes/Left4Dead2.jpg">
+</td>
+
+</tr>
+
+
+
+<tr>
+
+<td>
+<img src="imagenes/REPO.jpg">
+</td>
+
+<td align="left">
+
+<h3>R.E.P.O</h3>
+
+<p><b>¿Por qué me gusta?</b> Me gusta el ambiente que tiene, 
+                           aunque da un poco de miedo al principio, me acostumbre 
+                        y con respecto a sus enemigos que hay en cada mapa si me 
+                    sacan un poco de onda porque me matan al rato, y eso pasa porque 
+                    tan bueno no soy para aniquilarlos.</p>
+                    <p><b>Logros:</b> Mi logro mas grande por asi decirlo, ha sido superar 
+                    por mi cuenta 3 niveles de los tantos que tiene el juego, ya de ahi 
+                    sube su dificultad y no puedo avanzar, ahora el juego se puede jugar entre
+                    varios, asi que con ellos si pude llegar mas lejos, aunque es gracioso como 
+                    gracias a mis muertes ellos andan perfudicados y se enojan o se rien de mis 
+                    desgracias.</p>
+
+</td>
+
+</tr>
+
+</table>
+
+
+<button class="volver"
+onclick="volverInicio()">
+Volver al inicio
+</button>
+
+</div>
+
+
+
+
+
+<!-- SOBRE MI -->
+<div class="caja seccion" id="sobre">
+
+<h2>Sobre mí</h2>
+
+<p><b>Misión:</b> Actualmente soy estudiante de Ingenieria de sistemas
+                                      en la Universidad Salesiana de Bolivia, y lo soy debido
+                                      a que quize saber mas acerca de como funcionan los dispositivos, 
+                                      como es su arquitectura, etc. Tambien soy Tecnico Basico en 
+                                      Gastronomia y Alimentacion, tambien participe de cursos de 
+                                      Doblaje, Cinematografia y Diseño Grafico. Yo como persona siempre 
+                                      soy optimista, siempre veo lo bueno de las cosas o de las personas 
+                                      que estan a mi alrededor. Yo ahora tengo como proposito seguir con 
+                                      mis estudios y salir de la Universidad con mi titulo, asi tambien 
+                                      poder conocer a quien sera mi compañera de vida y poder formar una 
+                                      familia, pero eso ya dira el tiempo cuando me tocara vivir ese evento.
+                                    </p>
+
+<p><b>Visión:</b> Mi vision es como dije anteriormente primero sera salir de la 
+                                      Universidad con mi titulo, pero despues que... Una vez saliendo podre 
+                                      dedicarme a lo que mas me gusta que es ser diseñador grafico, seguir creando 
+                                      contenido en mis redes sociales ya que por ahora estan paralizados, 
+                                      podre enfocarme mas en mi sueño que es ser alguien reconocido a nivel 
+                                      mundial en el mundo de la actuacion y en el doblaje, tal vez sera complicado 
+                                      pero no sera imposible, otra de la metas que tengo es poder viajar por el mundo.
+                                    </p>
+
+
+<h3>Mis intereses</h3>
+
+<div class="slider">
+<img src="imagenes/Diseñador.jpeg">
+<img src="imagenes/ActorVoz.jpeg">
+<img src="imagenes/Cine.jpeg">
+</div>
+
+
+<button class="volver"
+onclick="volverInicio()">
+Volver al inicio
+</button>
+
+</div>
+
+
+
+
+<!-- TAREAS -->
+<div class="caja seccion" id="tareas">
+
+<h2>Tareas Destacadas</h2>
+
+<p>A lo largo de estos años que llevo aqui en la carrera me destaque mas 
+            en diseñar y crear una empresa fantasma el cual hasta le diseñe un 
+            logotipo, tambien en tema de programacion me destaque por uno de mis 
+            trabajos que era crear un videojuego que era un Flappy Bird, era sencillo pero me diverti creandolo, 
+            por ultimo tambien me destaque cuando demostre mi habilidad para poder 
+            expresarme en frente de todos gracias a lo que aprendi de Expresion Oral y Escrita.
+        </p>
+
+<div class="slider">
+<img src="imagenes/Logotipo.jpeg">
+<img src="imagenes/JuegoFlappy.jpeg">
+<img src="imagenes/Expresion.jpeg">
+</div>
+
+
+<button class="volver"
+onclick="volverInicio()">
+Volver al inicio
+</button>
+
+</div>
+
+
+
+
+
+<!-- REDES -->
+<div class="caja seccion" id="redes">
+
+<h2>Algunas de mis Redes Sociales</h2>
+
+
+<h2>Twitch</h2>
+
+<a href="https://www.twitch.tv/alanbrito679"
+target="_blank">
+Haz clic Aquí
+</a>
+
+<br><br>
+
+
+<h2>TikTok</h2>
+
+<a href="https://www.tiktok.com/@alanbrito679yt"
+target="_blank">
+Haz clic Aquí
+</a>
+
+<br><br>
+
+
+<h2>Instagram</h2>
+
+<a href="https://www.instagram.com/alanbrito6791/"
+target="_blank">
+Haz clic Aquí
+</a>
+
+<br><br>
+
+
+<h2>Facebook</h2>
+
+<a href="https://www.facebook.com/alan.delrio.1272/"
+target="_blank">
+Haz clic Aquí
+</a>
+
+<br><br><br>
+
+
+<button class="volver"
+onclick="volverInicio()">
+Volver al inicio
+</button>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function mostrar(id){
+
+let secciones=
+document.querySelectorAll('.seccion');
+
+secciones.forEach(
+s=>s.style.display='none'
+);
+
+document.getElementById(id)
+.style.display='block';
+
+window.scrollTo(0,0);
+
+}
+
+function volverInicio(){
+
+let secciones=
+document.querySelectorAll('.seccion');
+
+secciones.forEach(
+s=>s.style.display='block'
+);
+
+window.scrollTo(0,0);
+
+}
+
+</script>
+
+
+</body>
+</html>
